@@ -1,0 +1,27 @@
+$bg-color: #0f0f0f;
+$surface-color: #1a1a1a;
+$surface-color-hover: #252525;
+
+$primary-color: #5D5FEF; // Purple
+$secondary-color: #A36BFF; // Light Purple
+$accent-color: #06b6d4; // Cyan
+
+$text-primary: #f3f4f6;
+$text-secondary: #9ca3af;
+$text-muted: #6b7280;
+
+$border-color: #27272a;
+
+$font-family-main: 'Outfit', sans-serif;
+$font-family-code: 'Fira Code', monospace;
+
+$transition-base: all 0.3s ease;
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-full: 9999px;
+
+$shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+$shadow-glow: 0 0 20px rgba($primary-color, 0.3);

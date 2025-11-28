@@ -1,0 +1,112 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.experience {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .header {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        .label {
+            color: $primary-color;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: $text-secondary;
+            font-size: 1.125rem;
+        }
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, $primary-color, $secondary-color);
+        }
+    }
+
+    .item {
+        position: relative;
+        margin-bottom: 3rem;
+        padding-left: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: $primary-color;
+            border-radius: 50%;
+            border: 3px solid $bg-color;
+            box-shadow: 0 0 0 4px rgba($primary-color, 0.2);
+        }
+
+        .company {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $text-primary;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 1.125rem;
+            color: $primary-color;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .period {
+            color: $text-muted;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            color: $text-secondary;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .highlights {
+            list-style: none;
+
+            li {
+                color: $text-secondary;
+                padding-left: 1.5rem;
+                margin-bottom: 0.5rem;
+                position: relative;
+
+                &::before {
+                    content: '▹';
+                    position: absolute;
+                    left: 0;
+                    color: $primary-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

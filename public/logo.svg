@@ -1,0 +1,49 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D5FEF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A36BFF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="#0f0f0f"/>
+  
+  <!-- Hexagon frame -->
+  <path d="M 100 20 L 160 55 L 160 125 L 100 160 L 40 125 L 40 55 Z" 
+        stroke="url(#logoGrad)" 
+        stroke-width="2" 
+        fill="none" 
+        opacity="0.3"/>
+  
+  <!-- SPG Text -->
+  <text x="100" y="115" 
+        font-family="'Outfit', sans-serif" 
+        font-size="72" 
+        font-weight="700" 
+        fill="url(#logoGrad)" 
+        text-anchor="middle"
+        filter="url(#glow)">SPG</text>
+  
+  <!-- Decorative underline -->
+  <line x1="55" y1="130" x2="145" y2="130" 
+        stroke="url(#logoGrad)" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        opacity="0.6"/>
+  
+  <!-- Code brackets decoration -->
+  <text x="100" y="155" 
+        font-family="monospace" 
+        font-size="16" 
+        fill="url(#logoGrad)" 
+        text-anchor="middle"
+        opacity="0.5">&lt;/&gt;</text>
+</svg>
