@@ -4,75 +4,53 @@ import styles from './Projects.module.scss';
 
 const projectsData = [
     {
+        title: 'Learning Command Center : Discipline Engine',
+        description: 'A comprehensive productivity and learning ecosystem inspired by the "All-In" discipline framework. Features roadmap tracking, automated skill validation, and consistency reporting with AWS Lambda/DynamoDB.',
+        tags: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'Serverless', 'TailwindCSS'],
+        github: 'https://github.com/Saurabhgathade131/portfolio',
+        demo: null,
+        highlights: [
+            'Mastery validation via Q&A Deep Dive Validator',
+            'Real-time Roadmaps for $200k AI Engineer Path',
+            'Automated Skill Extraction for Resume Building',
+            'Daily Accountability via Nightly Standup Engine'
+        ]
+    },
+    {
         title: 'LLM Studio Platform',
-        description: 'Enterprise AI platform with real-time multi-agent execution, GraphQL-WebSocket streaming, and comprehensive AI trace visualization. Features micro-frontend architecture and NPM streaming library.',
-        tags: ['React', 'Next.js', 'TypeScript', 'GraphQL', 'WebSockets', 'Node.js', 'FastAPI', 'Redis'],
+        description: 'Enterprise-grade AI orchestration platform with real-time multi-agent execution, streaming token responses, and advanced observability for LLM traces. Engineered with micro-frontend architecture.',
+        tags: ['SolidJS', 'Next.js', 'FastAPI', 'Redis', 'WebSockets', 'GraphQL', 'LangGraph'],
         github: 'https://github.com/Saurabhgathade131',
         demo: null,
         highlights: [
-            'Real-time streaming with 40% latency reduction',
-            'NPM library reducing integration from 8h to 45min',
-            '27% TTFB improvement, 18% bundle size reduction'
+            'Real-time streaming reducing perceived latency by 40%',
+            'NPM library reducing integration time from 8h to 45min',
+            '27% TTFB improvement via edge caching strategies',
+            'High-performance orchestration for 10+ concurrent agents'
         ]
     },
     {
-        title: 'Real-Time AI Chat Platform',
-        description: 'Full-stack conversational platform with token streaming, speech input, and agentic flows. Event-driven backend using Redis Pub/Sub, microservices, and WebSocket broadcasting.',
-        tags: ['React', 'Node.js', 'FastAPI', 'Redis', 'WebSockets', 'MongoDB'],
+        title: 'AI Multi-Agent Interviewer',
+        description: 'Agentic AI system designed to conduct deep technical interviews. Features proactive questioning, live code analysis, and multimodal feedback loops using Semantic Kernel.',
+        tags: ['Python', 'Semantic Kernel', 'Azure OpenAI', 'WebRTC', 'STT/TTS'],
         github: 'https://github.com/Saurabhgathade131',
         demo: null,
         highlights: [
-            'Voice-to-Text streaming with 93% test coverage',
-            'Event-driven architecture with Redis Pub/Sub',
-            'Structured reasoning steps and tool invocation'
+            'Real-time code feedback & proactive hints',
+            'Multimodal STT/TTS interaction loop',
+            'Automated test case generation for live code'
         ]
     },
     {
-        title: 'ChatHub — Real-time MERN Chat App',
-        description: 'Socket.io-powered real-time chat application with typing indicators, presence tracking, Google OAuth authentication, and private messaging capabilities.',
-        tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'OAuth'],
+        title: 'ChatHub — Real-time MERN Social App',
+        description: 'Socket.io-powered real-time communication platform featuring presence tracking, typing dynamics, and secure JWT-based private messaging with end-to-end reliability.',
+        tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'Redis'],
         github: 'https://github.com/Saurabhgathade131',
         demo: null,
         highlights: [
-            'Real-time messaging with Socket.IO',
-            'Google OAuth integration',
-            'Typing indicators and presence tracking'
-        ]
-    },
-    {
-        title: 'Placement Cell Management System',
-        description: 'End-to-end recruitment portal handling student data, recruiter modules, interview rounds, and comprehensive reporting. Features secure REST APIs with JWT authentication and RBAC.',
-        tags: ['Node.js', 'Express', 'MongoDB', 'JWT', 'REST API'],
-        github: 'https://github.com/Saurabhgathade131',
-        demo: null,
-        highlights: [
-            'Secure JWT authentication with RBAC',
-            'Efficient MongoDB aggregation logic',
-            'Complete recruitment workflow management'
-        ]
-    },
-    {
-        title: 'Web Scraping Automation UI',
-        description: 'Production-grade web scraping system with DOM selector mapping, live previews, payload builder, and anti-bot-safe workflows for automated data extraction.',
-        tags: ['React', 'Node.js', 'Python', 'Selenium', 'Automation'],
-        github: 'https://github.com/Saurabhgathade131',
-        demo: null,
-        highlights: [
-            'DOM selector mapping with live preview',
-            'Anti-bot detection mechanisms',
-            'Automated workflow builder'
-        ]
-    },
-    {
-        title: 'Jai Bhim Connect',
-        description: 'Ed-tech platform with mobile and web interfaces. Built using React Native for mobile, React.js for web, with Node.js backend. Improved API performance by 30% through MongoDB optimization.',
-        tags: ['React Native', 'React', 'Node.js', 'MongoDB', 'Express'],
-        github: 'https://github.com/Saurabhgathade131',
-        demo: null,
-        highlights: [
-            '30% API performance improvement',
-            'Cross-platform mobile and web support',
-            'Optimized MongoDB queries'
+            'Real-time state synchronization via Socket.IO',
+            'Google OAuth integration & secure RBAC',
+            'Presence tracking with Redis backplane'
         ]
     }
 ];

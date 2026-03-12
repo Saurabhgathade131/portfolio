@@ -12,6 +12,7 @@ const Header: Component = () => {
                 <nav class={styles.nav}>
                     <A href="/" end activeClass={styles.active}>Home</A>
                     <A href="/projects" activeClass={styles.active}>Projects</A>
+                    <A href="/roadmaps" activeClass={styles.active}>Roadmaps</A>
                     <A href="/about" activeClass={styles.active}>About</A>
                     <A href="/contact" activeClass={styles.active}>Contact</A>
                 </nav>
