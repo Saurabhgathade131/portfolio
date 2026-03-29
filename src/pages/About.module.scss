@@ -2,110 +2,183 @@
 @use '../styles/mixins' as *;
 
 .about {
-    min-height: 100vh;
-    padding: 8rem 2rem 4rem;
+    padding: 8rem 2rem;
     max-width: 1000px;
     margin: 0 auto;
+}
 
-    .header {
-        text-align: center;
-        margin-bottom: 4rem;
+.header {
+    text-align: center;
+    margin-bottom: 6rem;
 
-        .title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+    .title {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+        color: var(--primary);
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.section {
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        svg {
+            color: var(--primary);
+        }
+    }
+
+    p {
+        color: var(--text-main);
+        line-height: 1.8;
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            position: relative;
+            padding-left: 2rem;
+            color: var(--text-dim);
+            margin-bottom: 1.25rem;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+
+            &::before {
+                content: '→';
+                position: absolute;
+                left: 0;
+                color: var(--primary);
+            }
+
+            strong {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 6rem;
+    padding-top: 6rem;
+    border-top: 1px solid var(--border);
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+    }
+}
+
+.milestonesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.milestoneCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: rgba(99, 102, 241, 0.3);
+        transform: scale(1.02);
+    }
+
+    .milestoneIcon {
+        color: #10b981;
+        font-size: 1.25rem;
+    }
+
+    .milestoneInfo {
+        display: flex;
+        flex-direction: column;
+
+        .milestoneName {
             font-weight: 700;
-            margin-bottom: 1rem;
-            @include gradient-text;
+            color: #f1f5f9;
+            font-size: 0.9375rem;
         }
 
-        .subtitle {
-            color: $text-secondary;
-            font-size: 1.25rem;
-        }
-    }
-
-    .content {
-        @include glass-effect;
-        padding: 3rem;
-        border-radius: $radius-lg;
-        margin-bottom: 3rem;
-
-        @include mobile {
-            padding: 2rem;
-        }
-
-        .section {
-            margin-bottom: 3rem;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-                font-weight: 600;
-                margin-bottom: 1.5rem;
-                color: $primary-color;
-            }
-
-            p {
-                color: $text-secondary;
-                line-height: 1.8;
-                margin-bottom: 1rem;
-                font-size: 1.125rem;
-            }
-
-            ul {
-                list-style: none;
-
-                li {
-                    color: $text-secondary;
-                    padding-left: 1.5rem;
-                    margin-bottom: 0.75rem;
-                    position: relative;
-                    line-height: 1.6;
-
-                    &::before {
-                        content: '▹';
-                        position: absolute;
-                        left: 0;
-                        color: $primary-color;
-                        font-weight: bold;
-                        font-size: 1.25rem;
-                    }
-                }
-            }
+        .milestoneDate {
+            font-size: 0.625rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
         }
     }
+}
 
+@media (max-width: 640px) {
     .stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-
-        .stat {
-            @include glass-effect;
-            padding: 2rem;
-            border-radius: $radius-lg;
-            text-align: center;
-            transition: $transition-base;
-
-            &:hover {
-                transform: translateY(-8px);
-                border-color: rgba($primary-color, 0.3);
-            }
-
-            .number {
-                font-size: 3rem;
-                font-weight: 700;
-                @include gradient-text;
-                margin-bottom: 0.5rem;
-            }
-
-            .label {
-                color: $text-secondary;
-                font-size: 1rem;
-            }
-        }
+        grid-template-columns: 1fr 1fr;
     }
 }

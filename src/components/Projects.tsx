@@ -1,4 +1,5 @@
 import { Component, For } from 'solid-js';
+import { Motion } from '@motionone/solid';
 import { AiOutlineGithub, AiOutlineGlobal } from 'solid-icons/ai';
 import styles from './Projects.module.scss';
 
@@ -57,13 +58,14 @@ const Projects: Component = () => {
 
             <div class={styles.grid}>
                 <For each={projectsData}>
-                    {(project) => (
-                        <div class={styles.card}>
-                            <div class={styles.imageContainer}>
-                                <div class={styles.image} style={{
-                                    background: `linear-gradient(135deg, rgba(93, 95, 239, 0.3), rgba(163, 107, 255, 0.3))`
-                                }} />
-                            </div>
+                    {(project, index) => (
+                        <Motion.div 
+                            initial={{ opacity: 0, y: 50 }}
+                            press={{ scale: 0.98 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: index() * 0.15 }}
+                            class={styles.card}
+                        >
                             <div class={styles.content}>
                                 <h3 class={styles.title}>{project.title}</h3>
                                 <p class={styles.description}>{project.description}</p>
@@ -95,7 +97,7 @@ const Projects: Component = () => {
                                     )}
                                 </div>
                             </div>
-                        </div>
+                        </Motion.div>
                     )}
                 </For>
             </div>

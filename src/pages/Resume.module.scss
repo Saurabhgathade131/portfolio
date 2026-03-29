@@ -152,53 +152,73 @@
     display: flex;
     align-items: center;
     gap: 8px;
-}
 
-.moduleList li .dot {
-    width: 4px;
-    height: 4px;
-    background: #6366f1;
-    border-radius: 50%;
+    li {
+        position: relative;
+        padding-left: 1.5rem;
+        color: var(--text-dim);
+        margin-bottom: 0.75rem;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+
+        &::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+    }
 }
 
 .skillsGrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 .skillTag {
-    background: rgba(99, 102, 241, 0.1);
-    color: #818cf8;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    font-size: 0.875rem;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &.verified {
+        border-color: var(--primary);
+        color: #fff;
+        background: rgba(99, 102, 241, 0.1);
+
+        svg {
+            color: var(--primary);
+        }
+    }
 }
 
-.verified {
-    background: rgba(16, 185, 129, 0.1);
-    color: #34d399;
-    border-color: rgba(16, 185, 129, 0.2);
+@media (max-width: 1024px) {
+    .resumePage {
+        padding: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .resumePage {
-        padding: 30px;
-    }
-
     .header {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+
+        .contactInfo {
+            align-items: center;
+        }
     }
 
-    .contactInfo {
-        text-align: left;
-    }
-
-    .nameInfo h1 {
-        font-size: 2.25rem;
+    .expHeader, .projectHeader {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 

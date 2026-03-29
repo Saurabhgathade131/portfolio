@@ -2,111 +2,119 @@
 @use '../styles/mixins' as *;
 
 .experience {
-    padding: 6rem 2rem;
-    max-width: 1000px;
+    padding: 8rem 2rem;
+    max-width: 1300px;
     margin: 0 auto;
 
     .header {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
 
         .label {
-            color: $primary-color;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 0.1em;
+            color: var(--primary);
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
 
         .title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            color: $text-secondary;
+            color: var(--text-dim);
             font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
     }
 
     .timeline {
-        position: relative;
-        padding-left: 2rem;
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, $primary-color, $secondary-color);
-        }
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
     .item {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 32px;
+        padding: 3rem;
+        backdrop-filter: blur(20px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
-        margin-bottom: 3rem;
-        padding-left: 2rem;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: $primary-color;
-            border-radius: 50%;
-            border: 3px solid $bg-color;
-            box-shadow: 0 0 0 4px rgba($primary-color, 0.2);
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
         }
 
         .company {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: $text-primary;
             margin-bottom: 0.5rem;
+            color: #fff;
         }
 
         .role {
             font-size: 1.125rem;
-            color: $primary-color;
             font-weight: 600;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
 
         .period {
-            color: $text-muted;
             font-size: 0.875rem;
-            margin-bottom: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .description {
-            color: $text-secondary;
-            line-height: 1.8;
-            margin-bottom: 1rem;
+            color: var(--text-main);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.0625rem;
         }
 
         .highlights {
             list-style: none;
+            padding: 0;
 
             li {
-                color: $text-secondary;
-                padding-left: 1.5rem;
-                margin-bottom: 0.5rem;
                 position: relative;
+                padding-left: 2rem;
+                color: var(--text-dim);
+                margin-bottom: 1rem;
+                font-size: 0.9375rem;
+                line-height: 1.6;
 
                 &::before {
                     content: '▹';
                     position: absolute;
                     left: 0;
-                    color: $primary-color;
+                    color: var(--primary);
                     font-weight: bold;
                 }
             }
         }
+    }
+}
+
+@media (max-width: 640px) {
+    .experience .item {
+        padding: 2rem;
     }
 }

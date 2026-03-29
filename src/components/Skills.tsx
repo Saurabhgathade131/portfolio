@@ -1,4 +1,5 @@
 import { Component, For } from 'solid-js';
+import { Motion } from '@motionone/solid';
 import { VsCode } from 'solid-icons/vs';
 import { TbDatabase } from 'solid-icons/tb';
 import { AiOutlineCloud } from 'solid-icons/ai';
@@ -68,7 +69,6 @@ const skillsData = [
     }
 ];
 
-// Technology logos with CDN links
 const techLogos = [
     { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
@@ -91,18 +91,28 @@ const techLogos = [
 const Skills: Component = () => {
     return (
         <section class={styles.skills} id="skills">
-            <div class={styles.header}>
+            <Motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                class={styles.header}
+            >
                 <p class={styles.label}>What I Do</p>
                 <h2 class={styles.title}>Skills & Technologies</h2>
                 <p class={styles.subtitle}>
                     A comprehensive toolkit for building modern, scalable applications
                 </p>
-            </div>
+            </Motion.div>
 
             <div class={styles.grid}>
                 <For each={skillsData}>
-                    {(category) => (
-                        <div class={styles.category}>
+                    {(category, index) => (
+                        <Motion.div 
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: index() * 0.1 }}
+                            class={styles.category}
+                        >
                             <h3 class={styles.categoryTitle}>
                                 <category.icon size={28} />
                                 {category.title}
@@ -112,7 +122,7 @@ const Skills: Component = () => {
                                     {(skill) => <span class={styles.skill}>{skill}</span>}
                                 </For>
                             </div>
-                        </div>
+                        </Motion.div>
                     )}
                 </For>
             </div>
@@ -121,11 +131,16 @@ const Skills: Component = () => {
                 <h3 class={styles.logosTitle}>Technology Stack</h3>
                 <div class={styles.logosGrid}>
                     <For each={techLogos}>
-                        {(tech) => (
-                            <div class={styles.logoItem}>
+                        {(tech, index) => (
+                            <Motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.5 + index() * 0.05 }}
+                                class={styles.logoItem}
+                            >
                                 <img src={tech.logo} alt={tech.name} loading="lazy" />
                                 <span class={styles.logoName}>{tech.name}</span>
-                            </div>
+                            </Motion.div>
                         )}
                     </For>
                 </div>

@@ -1,4 +1,5 @@
 import { Component, For } from 'solid-js';
+import { Motion } from '@motionone/solid';
 import styles from './Experience.module.scss';
 
 const experienceData = [
@@ -62,18 +63,28 @@ const experienceData = [
 const Experience: Component = () => {
     return (
         <section class={styles.experience} id="experience">
-            <div class={styles.header}>
+            <Motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                class={styles.header}
+            >
                 <p class={styles.label}>Career Journey</p>
                 <h2 class={styles.title}>Work Experience</h2>
                 <p class={styles.subtitle}>
                     Building impactful solutions across various domains
                 </p>
-            </div>
+            </Motion.div>
 
             <div class={styles.timeline}>
                 <For each={experienceData}>
-                    {(exp) => (
-                        <div class={styles.item}>
+                    {(exp, index) => (
+                        <Motion.div 
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: index() * 0.2 }}
+                            class={styles.item}
+                        >
                             <h3 class={styles.company}>{exp.company}</h3>
                             <p class={styles.role}>{exp.role}</p>
                             <p class={styles.period}>{exp.period} • {exp.location}</p>
@@ -83,7 +94,7 @@ const Experience: Component = () => {
                                     {(highlight) => <li>{highlight}</li>}
                                 </For>
                             </ul>
-                        </div>
+                        </Motion.div>
                     )}
                 </For>
             </div>

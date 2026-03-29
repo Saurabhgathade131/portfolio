@@ -1,4 +1,5 @@
 import { Component, createResource, For, Show } from 'solid-js';
+import { Motion } from '@motionone/solid';
 import styles from './About.module.scss';
 import { FiAward, FiCheckCircle } from 'solid-icons/fi';
 
@@ -16,13 +17,23 @@ const About: Component = () => {
 
     return (
         <div class={styles.about}>
-            <div class={styles.header}>
+            <Motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                class={styles.header}
+            >
                 <h1 class={styles.title}>About Me</h1>
                 <p class={styles.subtitle}>Full Stack Engineer | AI Enthusiast | Problem Solver</p>
-            </div>
+            </Motion.div>
 
             <div class={styles.content}>
-                <div class={styles.section}>
+                <Motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    class={styles.section}
+                >
                     <h2>Professional Summary</h2>
                     <p>
                         Full Stack Engineer with extensive experience building scalable, cloud-native systems using
@@ -35,31 +46,41 @@ const About: Component = () => {
                         engineering high-performance Agentic AI solutions that automate complex code transformations and
                         distributed technical workflows.
                     </p>
-                </div>
+                </Motion.div>
 
                 <Show when={verifiedSkills()?.length > 0}>
-                    <div class={styles.section}>
-                        <h2 class="flex items-center gap-2">
-                            <FiAward class="text-indigo-500" />
-                            Verified Milestones (Discipline Engine)
+                    <Motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        class={styles.section}
+                    >
+                        <h2>
+                            <FiAward />
+                            Verified Milestones
                         </h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class={styles.milestonesGrid}>
                             <For each={verifiedSkills()}>
                                 {(skill: any) => (
-                                    <div class="flex items-center gap-3 p-4 glass-card border-indigo-500/10 hover:border-indigo-500/30 transition-all">
-                                        <FiCheckCircle class="text-emerald-500 flex-shrink-0" />
-                                        <div>
-                                            <span class="font-bold text-slate-100 block">{skill.skillName}</span>
-                                            <span class="text-[10px] text-slate-500 uppercase tracking-tighter">Verified on {new Date(skill.timestamp).toLocaleDateString()}</span>
+                                    <div class={styles.milestoneCard}>
+                                        <FiCheckCircle class={styles.milestoneIcon} />
+                                        <div class={styles.milestoneInfo}>
+                                            <span class={styles.milestoneName}>{skill.skillName}</span>
+                                            <span class={styles.milestoneDate}>Verified on {new Date(skill.timestamp).toLocaleDateString()}</span>
                                         </div>
                                     </div>
                                 )}
                             </For>
                         </div>
-                    </div>
+                    </Motion.div>
                 </Show>
 
-                <div class={styles.section}>
+                <Motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    class={styles.section}
+                >
                     <h2>Expertise & Capabilities</h2>
                     <ul>
                         <li><strong>Frontend Excellence:</strong> Expert in React.js, Next.js, TypeScript with focus on performance optimization (SSR/ISR, code splitting)</li>
@@ -68,19 +89,29 @@ const About: Component = () => {
                         <li><strong>AI Integration:</strong> Hands-on experience integrating LLM APIs (OpenAI, Anthropic) and LangGraph workflows</li>
                         <li><strong>Cloud & DevOps:</strong> AWS deployment, Docker containerization, CI/CD pipelines, and serverless</li>
                     </ul>
-                </div>
+                </Motion.div>
 
-                <div class={styles.section}>
+                <Motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    class={styles.section}
+                >
                     <h2>Beyond Code</h2>
                     <p>
                         I believe in continuous learning and staying ahead of industry trends. My current focus is achieving
                         mastery in **Agentic AI Architecture** and **Advanced Distributed Systems** part of my $200k career roadmap.
                         I track my discipline daily through a custom-built Command Center that enforces absolute consistency.
                     </p>
-                </div>
+                </Motion.div>
             </div>
 
-            <div class={styles.stats}>
+            <Motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+                class={styles.stats}
+            >
                 <div class={styles.stat}>
                     <div class={styles.number}>4+</div>
                     <div class={styles.label}>Years Experience</div>
@@ -101,7 +132,7 @@ const About: Component = () => {
                     <div class={styles.number}>40%</div>
                     <div class={styles.label}>Performance Gains</div>
                 </div>
-            </div>
+            </Motion.div>
         </div>
     );
 };
