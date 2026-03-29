@@ -31,9 +31,9 @@ const About: Component = () => {
                         caching strategies, and performance optimization with a focus on reliability and clean engineering practices.
                     </p>
                     <p>
-                        Currently at <strong>Techolution</strong>, I lead the development of the LLM Studio Platform,
-                        engineering high-performance AI solutions that power real-time multi-agent executions and
-                        distributed workflows.
+                        Currently at <strong>Qualizeal</strong>, I lead the development of AI-driven framework migration systems,
+                        engineering high-performance Agentic AI solutions that automate complex code transformations and
+                        distributed technical workflows.
                     </p>
                 </div>
 

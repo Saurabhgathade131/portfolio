@@ -3,22 +3,32 @@ import styles from './Experience.module.scss';
 
 const experienceData = [
     {
-        company: 'Techolution',
-        role: 'Frontend Engineer / Full Stack Engineer',
-        period: 'Apr 2024 - Present',
-        location: 'Remote',
-        description: 'Leading development of LLM Studio Platform and enterprise AI solutions.',
+        company: 'Qualizeal',
+        role: 'Full Stack & AI Engineer',
+        period: 'Dec 2025 - Present',
+        location: 'Hyderabad, India',
+        description: 'Architecting AI-driven framework migration and multi-agent systems.',
         highlights: [
-            'Engineered high-performance GraphQL-WebSocket streaming layer powering real-time multi-agent executions, reducing interaction latency by 40%',
-            'Designed Next.js + TypeScript AI chat interface with structured reasoning steps, tool invocation visibility, and streaming UX',
+            'Architected AI-driven framework migration system reducing manual migration effort by 60%+',
+            'Designed end-to-end AI agent architecture for code transformation, validation, and execution',
+            'Led development of Test Automation Agentic Workflow with specialized UI Explorer and Code Gen agents',
+            'Implemented Decorator Pattern-based logging and canonical observability for distributed AI agents',
+            'Applying SOLID principles to design scalable, production-grade agentic platforms'
+        ]
+    },
+    {
+        company: 'Techolution',
+        role: 'Full Stack Engineer',
+        period: 'Apr 2024 - Dec 2025',
+        location: 'Remote',
+        description: 'Engineered LLM Studio Platform and enterprise AI solutions.',
+        highlights: [
+            'Engineered high-performance GraphQL-WebSocket streaming layer reducing interaction latency by 40%',
+            'Designed Next.js + TypeScript AI chat interface with structured reasoning and tool invocation visibility',
             'Created reusable NPM streaming UI library reducing integration time from 8 hours to 45 minutes',
             'Built robust AI Trace Viewer visualizing agent execution, token timelines, and performance metrics',
-            'Architected micro-frontend modules (Agent Mode, Prompt Mode, Filter Mode) enabling independent deployment',
-            'Optimized critical paths using SSR/ISR, dynamic imports, virtualization - improving TTFB by 27% and reducing bundle size by 18%',
-            'Delivered production-grade Voice-to-Text streaming UI with 93% test coverage',
-            'Implemented secure web scraping automation UI with DOM selector mapping and anti-bot-safe workflows',
-            'Built backend modules using Node.js, Express, MongoDB, and FastAPI microservices',
-            'Introduced Redis Pub/Sub pipelines for efficient real-time communication'
+            'Architected micro-frontend modules enabling independent deployment across Agentic modes',
+            'Optimized critical paths improving TTFB by 27% and reducing bundle size by 18%'
         ]
     },
     {

@@ -4,53 +4,42 @@ import styles from './Projects.module.scss';
 
 const projectsData = [
     {
-        title: 'Learning Command Center : Discipline Engine',
-        description: 'A comprehensive productivity and learning ecosystem inspired by the "All-In" discipline framework. Features roadmap tracking, automated skill validation, and consistency reporting with AWS Lambda/DynamoDB.',
-        tags: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'Serverless', 'TailwindCSS'],
-        github: 'https://github.com/Saurabhgathade131/portfolio',
+        title: 'AI-Native Coding Interview Platform',
+        description: '🚀 A professional AI-native coding interview platform with real-time interaction, intelligent feedback, and secure execution. Features an AI interviewer with stuck detection and contextual hinting.',
+        tags: ['Next.js 14', 'FastAPI', 'Azure OpenAI', 'Judge0', 'Socket.io', 'Monaco Editor'],
+        github: 'https://github.com/Saurabhgathade131/ai-interview-platform',
         demo: null,
         highlights: [
-            'Mastery validation via Q&A Deep Dive Validator',
-            'Real-time Roadmaps for $200k AI Engineer Path',
-            'Automated Skill Extraction for Resume Building',
-            'Daily Accountability via Nightly Standup Engine'
+            'Intelligent AI interviewer with stuck detection mechanism',
+            'Secure real-time code execution via Judge0 API integration',
+            'Live voice interaction using Web Speech API',
+            'Robust proctoring: Tab-switch tracking & Paste detection'
         ]
     },
     {
-        title: 'LLM Studio Platform',
-        description: 'Enterprise-grade AI orchestration platform with real-time multi-agent execution, streaming token responses, and advanced observability for LLM traces. Engineered with micro-frontend architecture.',
-        tags: ['SolidJS', 'Next.js', 'FastAPI', 'Redis', 'WebSockets', 'GraphQL', 'LangGraph'],
+        title: 'Discipline Engine: Learning Command Center',
+        description: '🛡️ A comprehensive productivity and learning ecosystem featuring roadmap tracking, automated skill validation, and consistency reporting. Built to master the $200k AI Engineer path.',
+        tags: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'Serverless'],
+        github: 'https://github.com/Saurabhgathade131/learning-plan',
+        demo: 'https://learning-plan-mu.vercel.app/',
+        highlights: [
+            'Real-time Roadmaps for $200k GenAI Engineer Path',
+            'Automated Skill Extraction for Resume Building',
+            'Mastery validation via Q&A Deep Dive Validator',
+            'Cloud-native deployment with Serverless Framework'
+        ]
+    },
+    {
+        title: 'LLM Multi-Agent Studio',
+        description: '🤖 Enterprise-grade AI orchestration platform with real-time multi-agent execution, streaming token responses, and advanced observability for LLM traces.',
+        tags: ['SolidJS', 'Next.js', 'FastAPI', 'Redis', 'WebSockets', 'LangGraph'],
         github: 'https://github.com/Saurabhgathade131',
         demo: null,
         highlights: [
             'Real-time streaming reducing perceived latency by 40%',
             'NPM library reducing integration time from 8h to 45min',
-            '27% TTFB improvement via edge caching strategies',
-            'High-performance orchestration for 10+ concurrent agents'
-        ]
-    },
-    {
-        title: 'AI Multi-Agent Interviewer',
-        description: 'Agentic AI system designed to conduct deep technical interviews. Features proactive questioning, live code analysis, and multimodal feedback loops using Semantic Kernel.',
-        tags: ['Python', 'Semantic Kernel', 'Azure OpenAI', 'WebRTC', 'STT/TTS'],
-        github: 'https://github.com/Saurabhgathade131',
-        demo: null,
-        highlights: [
-            'Real-time code feedback & proactive hints',
-            'Multimodal STT/TTS interaction loop',
-            'Automated test case generation for live code'
-        ]
-    },
-    {
-        title: 'ChatHub — Real-time MERN Social App',
-        description: 'Socket.io-powered real-time communication platform featuring presence tracking, typing dynamics, and secure JWT-based private messaging with end-to-end reliability.',
-        tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'Redis'],
-        github: 'https://github.com/Saurabhgathade131',
-        demo: null,
-        highlights: [
-            'Real-time state synchronization via Socket.IO',
-            'Google OAuth integration & secure RBAC',
-            'Presence tracking with Redis backplane'
+            'High-performance orchestration for 10+ concurrent agents',
+            'Distributed tracing for AI execution pipelines'
         ]
     }
 ];

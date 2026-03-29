@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Roadmaps = lazy(() => import('./pages/Roadmaps'));
+const Resume = lazy(() => import('./pages/Resume'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 
@@ -22,6 +23,7 @@ const App: Component = () => {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/roadmaps" component={Roadmaps} />
+      <Route path="/resume" component={Resume} />
       <Route path="/projects" component={ProjectsPage} />
       <Route path="/contact" component={ContactPage} />
     </Router>

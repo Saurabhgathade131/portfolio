@@ -56,13 +56,13 @@ const skillsData = [
         title: 'AI & Performance',
         icon: BiRegularBrain,
         skills: [
-            'LLM Integration',
-            'OpenAI APIs',
-            'Langchain',
-            'SSR/ISR',
-            'Code Splitting',
+            'Agentic AI Architecture',
+            'LangGraph Workflows',
+            'LLM Integration (Azure/OpenAI)',
+            'Framework Migration Automation',
+            'Multi-Agent Orchestration',
+            'SSR/ISR & Performance Optimization',
             'Micro-Frontends',
-            'Design Systems',
             'Jest Testing'
         ]
     }
